@@ -43,9 +43,10 @@ x <- list(
   Pfam = pfam_coding$X1,
   Swiss_Prot = swiss_out$X1
 )
+names(x)[3] <- "Swiss Prot"
 
 #由于取交集数据大概率不会等长，需要使用list，然后作图
-p1 <- ggvenn(x,columns = c('Nr','Pfam','Swiss_Prot'),
+p1 <- ggvenn(x,columns = c('Nr','Pfam','Swiss Prot'),
              stroke_size = 0.5, fill_color =c("#DF7A5E",'#2A9D8E','#F3A261'))
 
 
